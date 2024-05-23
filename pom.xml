@@ -43,7 +43,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <scope>tes1t</scope>
         </dependency>
 
         <dependency>
@@ -62,7 +62,6 @@
             <artifactId>spring-graphql-test</artifactId>
             <scope>test</scope>
         </dependency>
-
 
         <dependency>
             <groupId>com.migrationDemo</groupId>

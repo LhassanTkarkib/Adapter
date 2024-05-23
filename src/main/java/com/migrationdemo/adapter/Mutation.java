@@ -19,16 +19,15 @@ public class Mutation implements GraphQLMutationResolver {
     @Autowired
     private UserClient userClient;
 
-//    public AccountEntityDto createAccount(Long userId, String accountNumber, Float balance) {
-//        // Check if the user exists
-//
-//        log.info("creating account for user with id: " + userId);
-//        UserEntityDto user = userClient.getUsers(userId);
-//        if (user == null) {
-//            throw new RuntimeException("User with id " + userId + " does not exist");
-//        }
-//
-//        // If the user exists, create the account
-//        return accountClient.createAccount(userId, accountNumber, balance);
-//    }
+    public AccountEntityDto createAccount(Long userId, String accountNumber, Float balance) {
+
+        log.info("creating account for user with id: " + userId);
+        UserEntityDto user = userClient.getUsers(userId);
+        if (user == null) {
+            throw new RuntimeException("User with id " + userId + " does not exist");
+        }
+
+        // If the user exists, create the account
+        return accountClient.createAccount(userId, accountNumber, balance);
+    }
 }
